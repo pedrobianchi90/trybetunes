@@ -86,7 +86,7 @@ class Search extends React.Component {
         {!loading
           && albunsList.length !== 0
             && (
-              <section>
+              <div>
                 <h3>{`Resultado de álbuns de: ${searchResult}`}</h3>
                 <ul>
                   {albunsList.map((album) => (
@@ -105,7 +105,7 @@ class Search extends React.Component {
                     </li>
                   ))}
                 </ul>
-              </section>
+              </div>
             )}
       </div>
     );
