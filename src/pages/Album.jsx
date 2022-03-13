@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import getMusics from '../services/musicsAPI';
 import MusicCard from '../components/MusicCard';
-import { addSong } from '../services/favoriteSongsAPI';
+import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
 
 class Album extends React.Component {
   constructor() {
@@ -45,12 +45,14 @@ class Album extends React.Component {
       loading: true,
     }, async () => {
       const result = await getMusics(id);
+      const favorite = await getFavoriteSongs();
       this.setState({
         artist: result[0].artistName,
         album: result[0].collectionName,
         image: result[0].artworkUrl100,
         songList: result,
         loading: false,
+        favoriteSongs: favorite,
       });
     });
   }
