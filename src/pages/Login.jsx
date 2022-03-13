@@ -42,13 +42,16 @@ class Login extends React.Component {
       loading
         ? <Loading />
         : (
-          <form data-testid="page-login">
+          <form data-testid="page-login" id="login-form">
             <input
+              id="input-login-text"
               type="text"
               data-testid="login-name-input"
+              placeholder="Insira seu usuário"
               onChange={ this.handleChange }
             />
             <button
+              id="login-button"
               type="button"
               data-testid="login-submit-button"
               onClick={ () => this.createUser() }

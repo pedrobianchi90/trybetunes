@@ -24,10 +24,12 @@ class Header extends React.Component {
   render() {
     const { user, loading } = this.state;
     return loading ? <Loading /> : (
-      <header data-testid="header-component">
-        <h1>Trybetunes</h1>
-        <h2 data-testid="header-user-name">{ user.name }</h2>
-        <ul>
+      <header data-testid="header-component" id="header">
+        <div className="header-1">
+          <h1 id="trybetunes">Trybetunes</h1>
+          <h3 data-testid="header-user-name">{ user.name }</h3>
+        </div>
+        <ul className="header-2">
           <li><Link to="/search" data-testid="link-to-search">Busca</Link></li>
           <li><Link to="/favorites" data-testid="link-to-favorites">Favoritos</Link></li>
           <li><Link to="/profile" data-testid="link-to-profile">Perfil</Link></li>

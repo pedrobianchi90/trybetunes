@@ -81,7 +81,7 @@ class Search extends React.Component {
         </form>
         {loading && <Loading />}
         {!loading && albunsList.length === 0 && (
-          <h2>Nenhum álbum foi encontrado</h2>
+          <p>Nenhum álbum foi encontrado</p>
         )}
         {!loading
           && albunsList.length !== 0
