@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Loading from '../components/Loading';
 import getMusics from '../services/musicsAPI';
 import MusicCard from '../components/MusicCard';
-import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
+import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
 
 class Album extends React.Component {
   constructor() {
@@ -34,6 +34,14 @@ class Album extends React.Component {
         this.setState((prevState) => ({
           loading: false,
           favoriteSongs: [...prevState.favoriteSongs, song],
+        }));
+      } else {
+        await removeSong(song);
+        this.setState((prevState) => ({
+          loading: false,
+          favoriteSongs: prevState.favoriteSongs.filter((favorite) => (
+            favorite.trackId !== song.trackId
+          )),
         }));
       }
     });
