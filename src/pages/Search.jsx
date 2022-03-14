@@ -63,6 +63,7 @@ class Search extends React.Component {
         <Header />
         <form>
           <input
+            id="search-bar"
             data-testid="search-artist-input"
             type="text"
             name="searchInput"
@@ -71,6 +72,7 @@ class Search extends React.Component {
             onChange={ this.handlechange }
           />
           <button
+            id="search-button"
             data-testid="search-artist-button"
             type="button"
             onClick={ this.handleClick }
@@ -81,26 +83,27 @@ class Search extends React.Component {
         </form>
         {loading && <Loading />}
         {!loading && albunsList.length === 0 && (
-          <p>Nenhum álbum foi encontrado</p>
+          <p id="not-found">Nenhum álbum foi encontrado</p>
         )}
         {!loading
           && albunsList.length !== 0
             && (
               <div>
-                <h3>{`Resultado de álbuns de: ${searchResult}`}</h3>
-                <ul>
+                <h3 id="result-text">{`Resultado de álbuns de: ${searchResult}`}</h3>
+                <ul id="album-list">
                   {albunsList.map((album) => (
-                    <li key={ album.collectionId }>
+                    <li className="album-layout" key={ album.collectionId }>
                       <Link
                         to={ `/album/${album.collectionId}` }
                         data-testid={ `link-to-album-${album.collectionId}` }
                       >
                         <img
+                          className="album-image-search"
                           src={ album.artworkUrl100 }
                           alt={ `${album.collectionName} - ${album.artistName}` }
                         />
-                        <p>{ album.collectionName }</p>
-                        <p>{ album.artistName }</p>
+                        <p className="album-search-name">{ album.collectionName }</p>
+                        <p className="artist-search-name">{ album.artistName }</p>
                       </Link>
                     </li>
                   ))}

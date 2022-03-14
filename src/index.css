@@ -12,10 +12,44 @@ code {
     monospace;
 }
 
-.loading {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+#loading {
+  position: absolute;
+  width: 418px;
+  height: 72px;
+  left: 511px;
+  top: 492px;
+
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 65px;
+  /* or 108% */
+
+  letter-spacing: 0.02em;
+
+  color: #023031;
+}
+
+#trybe-header {
+  color: #3D495C;
+  font-size: 50px;
+  position: absolute;
+  width: 208px;
+  height: 158px;
+  left: 604px;
+  top: 169px;
+}
+
+#tunes-header {
+  color: #9e9e9e;
+  font-size: 50px;
+  position: absolute;
+  width: 208px;
+  height: 158px;
+  left: 660px;
+  top: 200px;
+
 }
 
 #login-form {
@@ -89,4 +123,172 @@ code {
   top: 0%;
   bottom: 0%;
   background: #F0F2F5;
+}
+
+#search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px 16px;
+  position: absolute;
+  width: 519px;
+  height: 45px;
+  left: 380px;
+  top: 278px;
+  background: #FFFFFF;
+  border: 1px solid #3D495C;
+  border-radius: 6px;
+}
+
+#search-button {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 32px;
+  position: absolute;
+  width: 134px;
+  height: 45px;
+  left: 950px;
+  top: 290px;
+  background: #003BE5;
+  border-radius: 2px;
+}
+
+#result-text {
+  width: 447px;
+  height: 33px;
+  margin-left: 480px;
+  top: 434px;
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 25px;
+  color: #001813;
+}
+
+#albunsList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.album-image-search {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 50px;
+  margin-left: 350px;
+  margin-top: 150px;
+}
+
+.album-search-name {
+  position: static;
+  margin-left: 600px;
+  margin-top: -180px;
+  width: 400px;
+  height: 40px;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  color: #3D495C;
+}
+
+.artist-search-name {
+  position: static;
+  margin-left: 600px;
+  margin-top: -120px;
+  width: 400px;
+  height: 40px;
+  font-family: 'Verdana';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  color: #3D495C;
+}
+
+#album-image {
+  position: absolute;
+  width: 290px;
+  height: 290px;
+  left: 179px;
+  top: 332px;
+  border-radius: 6px;
+}
+
+#album-title {
+  position: absolute;
+  width: 330px;
+  height: 36px;
+  left: 179px;
+  top: 667px;
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 37px;
+  color: #023031;
+}
+
+#artist-title {
+  position: absolute;
+  width: 255px;
+  height: 36px;
+  left: 184px;
+  top: 750px;
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 25px;
+  color: #023031;
+}
+
+.music-preview-name {
+  position: absolute;
+  width: 200px;
+  height: 10px;
+  left: 589px;
+  /* top: 356px; */
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  color: #001813;
+}
+
+.music-preview {
+/* position: absolute; */
+margin-left: 800px;
+width: 350px;
+height: 40px;
+left: 716px;
+/* top: 333px; */
+background: #F0F2F5;
+border-radius: 50px;
+}
+
+.favorite-checkbox {
+  width: 15px;
+  height: 15px;
+  margin-left: 1200px;
+}
+
+#not-found {
+  position: absolute;
+  width: 600px;
+  height: 72px;
+  left: 415px;
+  top: 400px;
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 65px;
+  letter-spacing: 0.02em;
+  color: #023031;
 }

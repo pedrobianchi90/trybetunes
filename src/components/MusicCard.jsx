@@ -6,8 +6,13 @@ class MusicCard extends React.Component {
     const { song } = this.props;
     return (
       <div>
-        <h4>{song.trackName}</h4>
-        <audio data-testid="audio-component" src={ song.previewUrl } controls>
+        <p className="music-preview-name">{song.trackName}</p>
+        <audio
+          className="music-preview"
+          data-testid="audio-component"
+          src={ song.previewUrl }
+          controls
+        >
           <track kind="captions" />
           O seu navegador não suporta o elemento
           <code>audio</code>

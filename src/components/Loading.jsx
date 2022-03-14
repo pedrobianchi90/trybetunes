@@ -2,7 +2,7 @@ import React from 'react';
 
 class Profile extends React.Component {
   render() {
-    return <h1>Carregando...</h1>;
+    return <h1 id="loading">Carregando...</h1>;
   }
 }
 

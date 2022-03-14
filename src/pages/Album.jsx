@@ -75,9 +75,9 @@ class Album extends React.Component {
             : (
               <div>
                 <section>
-                  <h2 data-testid="artist-name">{ artist }</h2>
-                  <h3 data-testid="album-name">{ album }</h3>
-                  <img src={ image } alt={ `${album}` } />
+                  <img src={ image } alt={ `${album}` } id="album-image" />
+                  <h2 data-testid="album-name" id="album-title">{ album }</h2>
+                  <h4 data-testid="artist-name" id="artist-title">{ artist }</h4>
                 </section>
                 { songList.map((song, index) => {
                   if (index !== 0) {
@@ -89,6 +89,7 @@ class Album extends React.Component {
                         />
                         <label htmlFor={ `favoriteSongs-${song.trackId}` }>
                           <input
+                            className="favorite-checkbox"
                             id={ `favoriteSongs-${song.trackId}` }
                             type="checkbox"
                             name="favorite"
@@ -97,7 +98,7 @@ class Album extends React.Component {
                             checked={ favoriteSongs
                               .some((favorites) => favorites.trackId === song.trackId) }
                           />
-                          Favorita
+                          {/* Favorita */}
                         </label>
                       </div>
                     );
